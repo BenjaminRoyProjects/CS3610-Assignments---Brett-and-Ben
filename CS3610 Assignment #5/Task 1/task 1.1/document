@@ -1,1 +1,4 @@
-
+class document():
+    @abstractmethod
+    def create(self, type) -> str:
+        pass
