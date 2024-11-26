@@ -1,4 +1,4 @@
-from document import document
+from task 1.1 import document
 
 class wordDocument(document):
     def __init__(self):
