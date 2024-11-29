@@ -38,8 +38,8 @@ class Application:
         self.__button = button
 
     def createUI(self):
-        "Creates"
-
+        "Creates "
+        
 
 
     def paint(self):
