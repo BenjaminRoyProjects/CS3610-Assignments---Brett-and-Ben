@@ -25,11 +25,11 @@ class CarBuilder(Builder):
     def setEngine(self, engine) -> None:
         self.__car.add(f'{engine} engine')
 
-    def setTripComputer(self, number) -> None:
-        self.__car.add(number)
+    def setTripComputer(self) -> None:
+        self.__car.add('Standard Trip')
 
-    def setGPS(self, number) -> None:
-        self.__car.add(number)
+    def setGPS(self) -> None:
+        self.__car.add('Standard GPS')
 
     def getResult(self) -> Car:
         return self.car()
