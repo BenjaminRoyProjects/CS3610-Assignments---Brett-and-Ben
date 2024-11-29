@@ -1,8 +1,11 @@
-from Director import Director
-from Builder import Builder
-from CarBuilder import CarBuilder
+from director import Director
+from builder import Builder
+from carBuilder import CarBuilder
+from manualBuilder import ManualBuilder
 
 director = Director()
 builder = CarBuilder()
-director.makeSportsCar(builder)
-car = builder.getResult()
+mBuilder = ManualBuilder()
+#director.makeSUV(builder)
+director.makeSUV(mBuilder)
+manual = builder.getResult()

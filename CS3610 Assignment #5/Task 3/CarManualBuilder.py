@@ -25,11 +25,11 @@ class ManualBuilder(Builder):
     def setEngine(self, engine) -> None:
         self.__Manual.add(f'{engine} engine')
 
-    def setTripComputer(self, number) -> None:
-        self.__Manual.add(number)
+    def setTripComputer(self) -> None:
+        self.__Manual.add('Standard Trip')
 
-    def setGPS(self, number) -> None:
-        self.__Manual.add(number)
+    def setGPS(self) -> None:
+        self.__Manual.add('Standard GPS')
 
     def getResult(self) -> Manual:
         return self.Manual()
