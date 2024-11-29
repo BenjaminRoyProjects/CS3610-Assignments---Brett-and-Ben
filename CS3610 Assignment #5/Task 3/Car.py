@@ -8,10 +8,12 @@ class Car:
   def add(self, component):
     print(f"Adding {component} to {self.__name}")
     self.__components.append(component)
-    print(f"Current components: {self.__components}
+    print(f"Current components: {self.__components}")
 
   def showComponents(self):
     print(f"There are {len(self.__components)} components in {self.__name}.")
-    print("Components: ", end="")
-    for component in self.__components:
-      print(f"{component} ", end="")
+    if len(self.__components) > 0:
+      print("Components: ", end="")
+      for component in self.__components:
+        print(f"{component} ", end="")
+      print("")
