@@ -44,6 +44,3 @@ class Application:
 
     def paint(self):
         pass
-
-app1 = Application()
-print(app1.factory)
