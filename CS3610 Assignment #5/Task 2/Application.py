@@ -8,6 +8,7 @@ class Application:
 
     def __init__(self, factory: Type[GUIFactory]):
         self.__factory = factory
+        self.__elements = []
 
     @property
     def factory(self) -> GUIFactory:
@@ -17,16 +18,23 @@ class Application:
     def factory(self, factory: GUIFactory) -> None:
         self.__factory = factory
 
-    @property
-    def button(self) -> Button:
-        return self.__button
+    def listElements(self) -> None:
+        if len(self.__components) > 0:
+            for element in self.__elements:
+                print("Elements: ", end="")
+                print(f"{element} ", end="")
+            print("")
 
-    @button.setter
-    def button(self, button: Button) -> None:
-        self.__button = button
+    def addButton(self, button: Button) -> None:
+        print("Adding button to UI...")
+        self.__elements.append(button)
+
+    def addCheckbox(self, checkbox: Checkbox) -> None:
+        print("Adding checkbox to UI...")
+        self.__elements.append(checkbox)
 
     def createUI(self):
-        "Creates "
+        "Creates and fills the Application's component field"
         
 
 
