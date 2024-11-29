@@ -1,31 +1,35 @@
-from Builder import Builder
-from Typing import Type
+from builder import Builder
+from typing import Type
+from car import Car
 
 class CarBuilder(Builder):
-  "Concrete builder class for cars."
+    "Concrete builder class for cars."
 
-  def __init__(self):
-    self.__car = Car()
+    def __init__(self):
+        self.reset()
 
-  @property
-  def car(self) -> Car:
-    return self.__car
+    @property
+    def car(self) -> Car:
+        return self.__car
 
-  @car.setter
-  def car(self, newcar: Type[Car]) -> None:
-    self.__car = newcar
-  
-  def reset() -> None:
-    self.__car = Car()
-    
-  def setSeats(number) -> None:
-    pass
+    @car.setter
+    def car(self, newcar: Type[Car]) -> None:
+        self.__car = newcar
 
-  def setEngine(engine) -> None:
-    pass
+    def reset(self) -> None:
+        self.__car = Car()
 
-  def setTripComputer(number) -> None:
-    pass
+    def setSeats(self, number) -> None:
+        self.__car.add(f'{number} seats')
 
-  def setGPS(number) -> None:
-    pass
+    def setEngine(self, engine) -> None:
+        self.__car.add(f'{engine} engine')
+
+    def setTripComputer(self, number) -> None:
+        self.__car.add(number)
+
+    def setGPS(self, number) -> None:
+        self.__car.add(number)
+
+    def getResult(self) -> Car:
+        return self.car()
