@@ -15,9 +15,9 @@ opsys = None
 while(True):
     opsys = input("Enter OS: ").upper()
     if(opsys not in supportedOSDict.keys()):
-        print("Operating system not supported. Supported operating systems: ", list(supportedOSDict.keys()))
+        print("Operating system not supported. Supported operating systems: ")
         for os in list(supportedOSDict.keys()):
-            print(f"{os }", end="")
+            print(f"{os} ", end="")
     else:
         break
 print(f"Creating a factory for {opsys} OS")
@@ -33,3 +33,6 @@ if opsys = "WINDOWS":
 app1 = Application(factory)
 app1.createUI()
 app1.paint()
+
+#cd CS3610\ Assignment\ #5/Task\ 2/^C
+#python client.py
