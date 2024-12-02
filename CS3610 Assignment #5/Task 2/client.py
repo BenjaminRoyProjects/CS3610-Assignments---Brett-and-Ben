@@ -15,7 +15,7 @@ opsys = None
 while(True):
     opsys = input("Enter OS: ").upper()
     if(opsys not in supportedOSDict.keys()):
-        print("Operating system not supported. Supported operating systems: ")
+        print("Operating system not supported. Supported operating systems: ", end="")
         for os in list(supportedOSDict.keys()):
             print(f"{os} ", end="")
         print("")
