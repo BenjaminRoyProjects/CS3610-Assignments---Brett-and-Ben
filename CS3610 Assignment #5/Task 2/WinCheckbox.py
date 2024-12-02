@@ -14,3 +14,6 @@ class WinCheckbox(Checkbox):
     def check(self) -> None:
         "Checks the checkbox."
         self.__isChecked = True
+
+    def __str__(self):
+        return "WinCheckbox"

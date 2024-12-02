@@ -20,3 +20,6 @@ class WinButton(Button):
     def press(self) -> None:
         "Presses the button."
         print(self.__statement)
+
+    def __str__(self):
+        return "WinButton"

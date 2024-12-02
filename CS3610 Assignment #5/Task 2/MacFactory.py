@@ -1,4 +1,8 @@
-#from GUIFactory import GUIFactory
+from GUIFactory import GUIFactory
+from Button import Button
+from MacButton import MacButton
+from Checkbox import Checkbox
+from MacCheckbox import MacCheckbox
 
 class MacFactory(GUIFactory):
     "A concrete factory extending the abstract GUIFactory. Creates only Mac elements."

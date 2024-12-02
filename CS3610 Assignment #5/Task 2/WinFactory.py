@@ -1,4 +1,8 @@
 from GUIFactory import GUIFactory
+from Button import Button
+from WinButton import WinButton
+from Checkbox import Checkbox
+from WinCheckbox import WinCheckbox
 
 class WinFactory(GUIFactory):
     "A concrete factory extending the abstract GUIFactory. Creates only Windows elements."
