@@ -35,7 +35,7 @@ class Application:
 
     def createUI(self):
         "Creates and fills the Application's component field"
-        
+        self.addButton(self.__factory.createButton())
 
 
     def paint(self):
