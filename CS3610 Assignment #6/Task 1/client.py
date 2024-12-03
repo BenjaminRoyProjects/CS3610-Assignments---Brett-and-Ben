@@ -3,3 +3,6 @@
 #Brett and Ben
 #Dec 6, 2024
 
+from ForecastSensors import ForecastSensors
+
+ForecastSensors.getForecastData()
