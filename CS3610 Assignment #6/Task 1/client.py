@@ -7,16 +7,14 @@ from ForecastSensors import ForecastSensors
 from ForecastSystem import ForecastSystem
 from Adapter import Adapter
 from ClientInterface import ClientInterface
+  
+#
+def forecast(self, service):
+  return service.getForecastData()
 
-class Client(ClientInterface):
-  
-  def forecast(self, service):
-    return service.getForecastData()
-  
-    serv1 = ForecastSystem()
-    adapter1 = Adapter(serv1)
-    bindata = adapter1.getForecastData()
-    print(bindata)
+#Main
+serv1 = ForecastSystem()
+print(forecast(serv1))
 
 
 #cd CS3610\ Assignment\ #6/Task\ 1
