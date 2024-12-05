@@ -7,7 +7,7 @@ from ForecastSensors import ForecastSensors
 from ForecastSystem import ForecastSystem
 from typing import Type
 import xml.etree.ElementTree as ElTree
-
+ 
 class Adapter(ForecastSensors):
     def __init__(self, service: Type[ForecastSystem]): 
         self.__adaptee = service #Instance of ForecastSystem class
