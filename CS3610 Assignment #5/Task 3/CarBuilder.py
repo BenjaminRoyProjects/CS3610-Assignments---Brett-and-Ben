@@ -1,6 +1,11 @@
-from builder import Builder
+#CarBuilder
+#CS3610 Assignment #5
+#Brett and Ben
+#Dec 6, 2024
+
+from Builder import Builder
 from typing import Type
-from car import Car
+from Car import Car
 
 class CarBuilder(Builder):
     "Concrete builder class for cars."
@@ -20,16 +25,16 @@ class CarBuilder(Builder):
         self.__car = Car()
 
     def setSeats(self, number) -> None:
-        self.__car.add(f'{number} seats')
+        self.__car.add(f'<{number} Seats>')
 
     def setEngine(self, engine) -> None:
-        self.__car.add(f'{engine} engine')
+        self.__car.add(f'<{engine} Engine>')
 
     def setTripComputer(self) -> None:
-        self.__car.add('Standard Trip')
+        self.__car.add('<Standard Trip>')
 
     def setGPS(self) -> None:
-        self.__car.add('Standard GPS')
+        self.__car.add('<Standard GPS>')
 
     def getResult(self) -> Car:
-        return self.car()
+        return self.__car
