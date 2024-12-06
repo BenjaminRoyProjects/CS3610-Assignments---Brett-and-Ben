@@ -1,8 +1,19 @@
-from documentCreator import documentCreatorClass, pdfDocument, wordDocument
-import documentCreator
+from pdfDocumentCreator import pdfDocumentCreator
+from wordDocumentCreator import wordDoucmentCreator
 
-documentCreator.docTypes = {"pdf":pdfDocument, "word":wordDocument}
-
-class version1():
-    def create_document(objType: str):
-        return documentCreatorClass.create_document(objType)
+class version1:
+    def create(self, testDocs):
+        for name in testDocs:
+            try:
+                if name.lower() == 'pdf':
+                    creator = pdfDocumentCreator()
+                elif name.lower() == 'word':
+                    creator = wordDoucmentCreator()
+                else:
+                    raise Exception("I cant make this object")
+                res = creator.factory_method()
+                if res:
+                    print(res.objType)
+            except Exception as _e:
+                print(_e)
+        return None

@@ -3,4 +3,4 @@ from wordDocument import wordDocument
 
 class wordDoucmentCreator(documentCreator):
     def factory_method(self):
-        return wordDocument.create()
+        return wordDocument()
