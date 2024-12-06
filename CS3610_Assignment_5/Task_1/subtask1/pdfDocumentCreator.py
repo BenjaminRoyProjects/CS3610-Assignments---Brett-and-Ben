@@ -1,6 +1,6 @@
 from documentCreator import documentCreator
 from pdfDocument import pdfDocument
 
-class pdfDocuementCreator(documentCreator):
+class pdfDocumentCreator(documentCreator):
     def factory_method(self):
-        return pdfDocument.create()
+        return pdfDocument()
