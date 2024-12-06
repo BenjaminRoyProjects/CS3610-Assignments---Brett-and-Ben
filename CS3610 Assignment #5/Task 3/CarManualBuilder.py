@@ -1,4 +1,9 @@
-from builder import Builder
+#CarManualBuilder
+#CS3610 Assignment #5
+#Brett and Ben
+#Dec 6, 2024
+
+from Builder import Builder
 from typing import Type
 from Manual import Manual
 
@@ -10,26 +15,26 @@ class ManualBuilder(Builder):
 
     @property
     def Manual(self) -> Manual:
-        return self.__Manual
+        return self.__manual
 
     @Manual.setter
     def Manual(self, newManual: Type[Manual]) -> None:
-        self.__Manual = newManual
+        self.__manual = newManual
 
     def reset(self) -> None:
-        self.__Manual = Manual()
+        self.__manual = Manual()
 
     def setSeats(self, number) -> None:
-        self.__Manual.add(f'{number} seats')
+        self.__manual.add(f'<{number} Seats>')
 
     def setEngine(self, engine) -> None:
-        self.__Manual.add(f'{engine} engine')
+        self.__manual.add(f'<{engine} Engine>')
 
     def setTripComputer(self) -> None:
-        self.__Manual.add('Standard Trip')
+        self.__manual.add('<Standard Trip>')
 
     def setGPS(self) -> None:
-        self.__Manual.add('Standard GPS')
+        self.__manual.add('<Standard GPS>')
 
     def getResult(self) -> Manual:
-        return self.Manual()
+        return self.__manual
