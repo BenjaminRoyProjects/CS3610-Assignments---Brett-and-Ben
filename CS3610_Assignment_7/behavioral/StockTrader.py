@@ -3,3 +3,5 @@
 #Brett and Ben
 #StockTrader
 
+class StockTrader:
+    pass

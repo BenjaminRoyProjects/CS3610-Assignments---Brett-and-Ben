@@ -3,3 +3,5 @@
 #Brett and Ben
 #Client
 
+class Client:
+    pass

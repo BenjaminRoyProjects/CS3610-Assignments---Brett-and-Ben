@@ -3,3 +3,5 @@
 #Brett and Ben
 #SubscriberInt
 
+class SubscriberInt:
+    pass

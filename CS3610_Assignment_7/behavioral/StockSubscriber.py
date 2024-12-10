@@ -3,3 +3,5 @@
 #Brett and Ben
 #StockSubscriber
 
+class StockSubscriber(SubscriberInt):
+    pass
