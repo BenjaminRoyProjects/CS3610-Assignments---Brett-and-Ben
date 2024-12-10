@@ -5,7 +5,7 @@
 
 from abc import abstractmethod,ABC
 
-#subscriber class
+#subscriber interface
 class SubscriberInt(ABC):
     
     @abstractmethod
