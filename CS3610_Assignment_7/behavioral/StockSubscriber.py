@@ -3,5 +3,17 @@
 #Brett and Ben
 #StockSubscriber
 
+from SubscriberInt import SubscriberInt
+
+#concrete subscriber class
 class StockSubscriber(SubscriberInt):
-    pass
+    def __init__(self, name):
+        self.__subject = None
+        self.__name = name
+    
+    def __str__(self):
+        print(f"Subscriber {self.__name}")
+    
+    def update(self, context):
+        print(f"stock {self.__subject} is {context}")
+    

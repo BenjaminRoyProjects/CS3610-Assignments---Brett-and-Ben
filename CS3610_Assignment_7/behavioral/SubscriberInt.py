@@ -3,5 +3,11 @@
 #Brett and Ben
 #SubscriberInt
 
-class SubscriberInt:
-    pass
+from abc import abstractmethod,ABC
+
+#subscriber class
+class SubscriberInt(ABC):
+    
+    @abstractmethod
+    def update(self,context):
+        pass
