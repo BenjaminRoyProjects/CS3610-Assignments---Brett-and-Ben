@@ -4,6 +4,7 @@
 #StockSubscriber
 
 from SubscriberInt import SubscriberInt
+from typing import Dict
 
 #concrete subscriber class
 class StockSubscriber(SubscriberInt):
@@ -14,6 +15,8 @@ class StockSubscriber(SubscriberInt):
     def __str__(self):
         print(f"Subscriber {self.__name}")
     
-    def update(self, context):
-        print(f"stock {self.__subject} is {context}")
+    def update(self, context:Dict[str,float]):
+        keys = context.keys()
+        for i in keys:
+            print(f"Stock {i} value: {context[i]}")
     
