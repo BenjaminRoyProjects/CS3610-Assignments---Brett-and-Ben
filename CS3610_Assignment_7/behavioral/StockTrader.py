@@ -71,7 +71,8 @@ class StockTrader:
         
 
 
-trader1 = StockTrader()
+#testing block available in Client now, so this can probably go
+'''trader1 = StockTrader()
 sub1 = StockSubscriber("Test1")
 trader1.addSubscriber(sub1)
 sub2 = StockSubscriber("Test2")
@@ -81,4 +82,4 @@ trader1.stockChange("IBM", 34.7)
 trader1.stockChange("IBM", 21.9)
 trader1.stockChange("Amazon", 89.6)
 trader1.stockChange("Facebook", 71.3)
-trader1.marketFluct()
+trader1.marketFluct()'''
