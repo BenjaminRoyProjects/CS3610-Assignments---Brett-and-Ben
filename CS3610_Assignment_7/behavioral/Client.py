@@ -40,5 +40,5 @@ sub3.printStockData()
 #Create a second trader and add a subscriber to it as well
 trader2 = StockTrader()
 trader2.stockChange("Microsoft", 94.7)
-trader2.addSubscriber(sub2)
-sub2.printStockData()
+trader2.addSubscriber(sub3)
+sub3.printStockData()
