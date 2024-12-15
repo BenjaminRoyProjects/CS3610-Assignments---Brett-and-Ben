@@ -43,7 +43,7 @@ class StockTrader:
                 subscriber.removeStock(stock)
             print("Removal successful.\n")
 
-    #Send a copy of the updated stockData dictionary to every subscriber
+    #Send a copy of the updated stockData dictionary to every subscriber.
     #Parameters: None.
     #Returns: Nothing.
     def updateSubscribers(self, changedstock: Type[str]=""):
@@ -54,7 +54,7 @@ class StockTrader:
             for sub in self.__subscribers:
                 sub.update(self.__stockData, changedstock)
 
-    #Update the value of a current stock or add a new stock with an initial value
+    #Update the value of a current stock or add a new stock with an initial value.
     #Parameters:
     #   stockID: String. The name of the stock being changed as it appears in the trader's dictionary.
     #   newValue: Float. The new value to be assigned to the stock in the trader's dictionary.
@@ -68,7 +68,7 @@ class StockTrader:
         self.updateSubscribers(stockID)
         print()
 
-    #Simulate random stock market fluctuations for testing purposes
+    #Simulate random stock market fluctuations for testing purposes.
     #Parameters:
     #   fluctchance: Integer, Minimum 1. Determines the odds of each stock having its value changed. The higher this value, the less likely each stock is to change.
     #   fluctrange: Integer, Minimum 1. Determines the upper and lower bound for the random value change for each stock that is being modified. The range of alteration is +- this number.
