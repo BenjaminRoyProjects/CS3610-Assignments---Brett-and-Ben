@@ -16,7 +16,7 @@ class StockSubscriber(SubscriberInt):
     def __str__(self):
         return (f"Subscriber {self.__name}")
     
-    #Update the subscriber's copy of the stock value data
+    #Update the subscriber's copy of the stock value data.
     #Parameters:
     #   stockvalues: {String, Float}. A copy of the trader's stock data dictionary, to be used to update the subscriber's personal dictionary.
     #Returns: Nothing.
@@ -29,7 +29,7 @@ class StockSubscriber(SubscriberInt):
             self.__stockData[changedstock] = stockvalues[changedstock]
             print(f"Updated {self.__name}'s {changedstock} stock value to: {stockvalues[changedstock]}")
 
-    #Remove an entry from the subscriber's stock data dictionary
+    #Remove an entry from the subscriber's stock data dictionary. Used when unsubscribing from a trader.
     #Parameters:
     #   stockID: String. The name of the stock to be removed as it appears in the subscriber's dictionary.
     #Returns: Nothing.
